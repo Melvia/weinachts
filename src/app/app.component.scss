@@ -1,3 +1,4 @@
+$clr: #222327;
 
 .navigation {
   width: 400px;
@@ -32,18 +33,18 @@
   width: 100%;
   text-align: center;
   font-weight: 500;
+
+  .icon {
+    position: relative;
+    display: block;
+    line-height: 75px;
+    font-size: 1.5rem;
+    text-align: center;
+    transition: 0.5s;
+    color: $clr;
+  }
 }
 
-.navigation ul li a .icon {
-  position: relative;
-  display: block;
-  line-height: 75px;
-  font-size: 1.5rem;
-  text-align: center;
-  transition: 0.5s;
-  color: var(--clr);
-
-}
 
 .navigation ul li.active a .icon {
   transform: translateY(-32px);
@@ -51,7 +52,7 @@
 
 .navigation ul li a .text {
   position: absolute;
-  color: var(--clr);
+  color: $clr;
   font-weight: 400;
   font-size: 0.75em;
   letter-spacing: 0.05em;
@@ -70,7 +71,7 @@
   top: -50%;
   width: 70px;
   height: 70px;
-  background: #29fd53;
+  background: #0577e8;
   border-radius: 50%;
   border: 6px solid $clr;
   transition: 0.5s;
@@ -99,18 +100,23 @@
   border-top-left-radius: 20px;
   box-shadow: -1px -10px 0 0 $clr;
 }
+
 .navigation ul li:nth-child(1).active ~ .indicator {
   transform: translateX(calc(70px * 0));
 }
+
 .navigation ul li:nth-child(2).active ~ .indicator {
   transform: translateX(calc(70px * 1));
 }
+
 .navigation ul li:nth-child(3).active ~ .indicator {
   transform: translateX(calc(70px * 2));
 }
+
 .navigation ul li:nth-child(4).active ~ .indicator {
   transform: translateX(calc(70px * 3));
 }
+
 .navigation ul li:nth-child(5).active ~ .indicator {
   transform: translateX(calc(70px * 4));
 }

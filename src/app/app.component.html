@@ -1,62 +1,49 @@
 <div>
-  <h1>Приложение Angular</h1>
 
-<!--  -->
-<!--  <nav>-->
-<!--    <a routerLink="" routerLinkActive="active">Главная</a>-->
-<!--    <a routerLink="/about" routerLinkActive="active">О сайте</a>-->
-<!--  </nav>-->
-
-
-<!--  <div class="container">-->
-<!--    <div class="segments" id="segments">-->
-<!--      <ul>-->
-<!--        <li routerLink="">Home</li>-->
-<!--        <li routerLink="/about">About</li>-->
-<!--        <li>Quest</li>-->
-<!--      </ul>-->
-<!--    </div>-->
-<!--  </div>-->
+  <h1>Рождественский квест</h1>
 
   <div class="navigation">
     <ul>
-      <li class="list active">
-        <a href="#">
+
+      <li #link class="list active" (click)="toggleActive($event)">
+        <a routerLink="/home">
                 <span class="icon">
-                    <ion-icon name="home-outline"></ion-icon>
+
+                <fa-icon [icon]="faHome"></fa-icon>
                 </span>
           <span class="text">Home</span>
         </a>
       </li>
-      <li class="list">
-        <a href="#">
+      <li #link class="list active" (click)="toggleActive($event)">
+        <a routerLink="/about">
                 <span class="icon">
-                    <ion-icon name="person-outline"></ion-icon>
+
+                <fa-icon [icon]="faSnowman"></fa-icon>
                 </span>
           <span class="text">Profile</span>
         </a>
       </li>
-      <li class="list">
-        <a href="#">
+      <li #link class="list" (click)="toggleActive($event)">
+        <a routerLink="/questions">
                 <span class="icon">
-                    <ion-icon name="mail-outline"></ion-icon>
 
+                <fa-icon [icon]="faMessage"></fa-icon>
                 </span>
           <span class="text">Messages</span>
         </a>
       </li>
-      <li class="list">
+      <li #link class="list" (click)="toggleActive($event)">
         <a href="#">
                 <span class="icon">
-                    <ion-icon name="paw-outline"></ion-icon>
+<fa-icon [icon]="faPhotoFilm"></fa-icon>
                 </span>
           <span class="text">Photos</span>
         </a>
       </li>
-      <li class="list">
+      <li #link class="list" (click)="toggleActive($event)">
         <a href="#">
                 <span class="icon">
-                    <ion-icon name="snow-outline"></ion-icon>
+                 <fa-icon [icon]="faSnowflake"></fa-icon>
                 </span>
           <span class="text">Settings</span>
         </a>
