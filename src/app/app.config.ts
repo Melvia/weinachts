@@ -9,14 +9,14 @@ import {QuestionsComponent} from "./questions/questions.component";
 
 // определение маршрутов
 const appRoutes: Routes =[
-  { path: "/", component: HomeComponent},
+  { path: "", component: HomeComponent},
   { path: "about", component: AboutComponent},
   // { path: "**", component: NotFoundComponent }
     { path: "quest", component: QuestionsComponent},
-  { path: "**", redirectTo: "/"}
+  { path: "**", redirectTo: ""}
 ];
 
 export const appConfig: ApplicationConfig = {
-  providers: [provideZoneChangeDetection({eventCoalescing: true}), provideRouter(routes)]
+  providers: [provideZoneChangeDetection({eventCoalescing: true}), provideRouter(appRoutes)]
 };
 
