@@ -1,7 +1,5 @@
-<div>
-
+<header>
   <h1>Рождественский квест</h1>
-
   <div class="navigation">
     <ul>
 
@@ -14,7 +12,7 @@
           <span class="text">Home</span>
         </a>
       </li>
-      <li #link class="list active" (click)="toggleActive($event)">
+      <li #link class="list" (click)="toggleActive($event)">
         <a routerLink="/about">
                 <span class="icon">
 
@@ -51,6 +49,11 @@
       <div class="indicator"></div>
     </ul>
   </div>
+</header>
 
+<div class="container">
   <router-outlet></router-outlet>
 </div>
+
+
+
