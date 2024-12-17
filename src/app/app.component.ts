@@ -35,4 +35,11 @@ export class AppComponent implements  OnInit {
   }
 
 
+  checkAnswer(){
+    const answerMap = new Map([[''], [], []]);
+
+
+  }
+
+
 }
