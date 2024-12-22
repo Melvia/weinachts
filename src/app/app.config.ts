@@ -12,7 +12,7 @@ const appRoutes: Routes =[
   { path: "", component: HomeComponent},
   { path: "about", component: AboutComponent},
   // { path: "**", component: NotFoundComponent }
-    { path: "quest", component: QuestionsComponent},
+    { path: "quest/:id", component: QuestionsComponent},
   { path: "**", redirectTo: ""}
 ];
 
