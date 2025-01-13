@@ -10,7 +10,7 @@ const appRoutes: Routes = [
   {path: "", component: HomeComponent},
   {path: "about", component: AboutComponent},
   {path: "win", component: WinComponent},
-  {path: "questions/:id", component: HomeComponent},
+  {path: "questions/:id", component: QuestionsComponent},
   {path: "questions", component: QuestionsComponent},
   {path: "**", redirectTo: ""}
 ];
