@@ -1,0 +1,126 @@
+@use '../../styles/variables'  as * ;
+
+
+//.container {
+//  background-color: #000;
+//  height: 100px;
+//  display: flex;
+//  justify-content: center;
+//  align-items: center;
+//}
+
+.active .button {
+  border: 3px dashed orange;
+}
+
+.button {
+  border-radius: 14px;
+  background-color: $buttonColor;
+  width: 156px;
+  height: 32px;
+  position: relative;
+
+
+  .buttonContent {
+    border-radius: 14px;
+    position: absolute;
+    background-color: $buttonColor;
+    top: 0;
+    right: 0;
+    //bottom: 0;
+    //left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+  }
+
+}
+
+@keyframes buttonSnake {
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+  10% {
+    transform: rotate(10deg) scale(.8);
+  }
+  50% {
+    transform: rotate(-10deg) scale(1.1);
+  }
+  0% {
+    transform: rotate(0deg) scale(1);
+  }
+}
+
+.active .buttonContent {
+  background-color: green;
+}
+
+.active .button {
+  animation: buttonSnake .7s 0s 1 ease-in-out;
+}
+
+.active .container {
+  background-color: #bd3838;
+  transition: all 1s ease-out;
+  background-position: center;
+}
+
+.icon {
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  width: 42px;
+  height: 42px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  transform: rotate(0deg);
+  transition: all .5s ease-out;
+  opacity: 0;
+}
+
+.active .icon {
+  opacity: 1;
+}
+
+.iconSanta {
+  background-image: url(./../../assets/santaClaus.png);
+}
+
+.iconTree {
+  background-image: url(./../../assets/christmasTree.png);
+}
+
+.iconStar {
+  background-image: url(./../../assets/glowingStar.png);
+}
+
+.iconParty {
+  background-image: url(./../../assets/partyPopper.png);
+}
+
+
+.active .iconSanta {
+  top: -30px;
+  left: calc(50% - 72px);
+  transform: rotate(-20deg);
+}
+
+.active .iconTree {
+  top: -40px;
+  left: calc(50% - 48px);
+  transform: rotate(-10deg);
+}
+
+.active .iconStar {
+  top: -40px;
+  left: calc(50% - 24px);
+  transform: rotate(-20deg);
+}
+
+.active .iconParty {
+  top: -30px;
+  left: calc(50% + 24px);
+  transform: rotate(-20deg);
+}

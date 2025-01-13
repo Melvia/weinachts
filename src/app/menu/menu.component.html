@@ -1,0 +1,52 @@
+<header>
+  <h1>Рождественский квест</h1>
+  <div class="navigation">
+    <ul>
+
+      <li #link class="list active" (click)="toggleActive($event)">
+        <a routerLink="/home">
+                <span class="icon">
+
+                <fa-icon [icon]="faHome"></fa-icon>
+                </span>
+          <span class="text">Домой</span>
+        </a>
+      </li>
+      <li #link class="list" (click)="toggleActive($event)">
+        <a routerLink="/questions">
+                <span class="icon">
+
+                <fa-icon [icon]="faMessage"></fa-icon>
+                </span>
+          <span class="text">Квест</span>
+        </a>
+      </li>
+      <li #link class="list" (click)="toggleActive($event)">
+        <a routerLink="/about">
+                <span class="icon">
+
+                <fa-icon [icon]="faSnowman"></fa-icon>
+                </span>
+          <span class="text">Profile</span>
+        </a>
+      </li>
+      <li #link class="list" (click)="toggleActive($event)">
+        <a href="#">
+                <span class="icon">
+<fa-icon [icon]="faPhotoFilm"></fa-icon>
+                </span>
+          <span class="text">Photos</span>
+        </a>
+      </li>
+      <li #link class="list" (click)="toggleActive($event)">
+        <a routerLink="/win">
+                <span class="icon">
+                 <fa-icon [icon]="faSnowflake"></fa-icon>
+                </span>
+          <span class="text">Settings</span>
+        </a>
+      </li>
+      <div class="indicator"></div>
+    </ul>
+  </div>
+</header>

@@ -1,6 +1,9 @@
-/* You can add global styles to this file, and also import other style files */
+@use 'variables';
 @import url('https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900');
+$buttonColor: #0577e8;
 $clr: #222327;
+$snow: #fff;
+
 * {
   margin: 0;
   padding: 0;

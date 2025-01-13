@@ -1,39 +1,19 @@
-import {Component, ElementRef, OnInit, QueryList, ViewChildren} from '@angular/core';
+import {Component} from '@angular/core';
 import {RouterLink, RouterOutlet} from '@angular/router';
-import {faCoffee, faHome, faMessage, faPhotoFilm, faSnowflake, faSnowman} from '@fortawesome/free-solid-svg-icons' ;
 import {FontAwesomeModule} from "@fortawesome/angular-fontawesome";
-import {IconProp} from '@fortawesome/fontawesome-svg-core';
+import {MenuComponent} from "./menu/menu.component";
+import {MenuEnigmaComponent} from "./menu-enigma/menu-enigma.component";
 
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, FontAwesomeModule, FontAwesomeModule, RouterLink],
+  imports: [RouterOutlet, FontAwesomeModule, FontAwesomeModule, RouterLink, MenuComponent, MenuEnigmaComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
-export class AppComponent implements  OnInit {
+export class AppComponent {
   title = 'weinachts';
-
-  @ViewChildren('link', {read: ElementRef}) protected links: QueryList<ElementRef> | undefined;
-  protected readonly faSnowman = faSnowman as IconProp;
-  protected readonly faHome = faHome as IconProp;
-  protected readonly faMessage = faMessage as IconProp;
-  protected readonly faPhotoFilm = faPhotoFilm as IconProp;
-  protected readonly faSnowflake = faSnowflake as IconProp;
-
-  ngOnInit(): void {
-
-  }
-
-  toggleActive(e: Event) {
-    console.log(e.target )
-
-    this.links?.forEach(item => item.nativeElement.classList.remove('active'));
-    (e.currentTarget as HTMLElement).classList.add('active');
-
-  }
-
 
 
 }

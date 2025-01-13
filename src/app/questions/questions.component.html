@@ -1,3 +1,9 @@
-<p>questions works!</p>
-<input type="text" [ngModel]="answer">
-<input type="button" (click)="checkAnswer()">
+<h1>Задание</h1>
+<div class="container">
+  <input type="text" [(ngModel)]="answer">
+
+  <!--  <button (click)="checkAnswer()">Ответить</button>-->
+  {{ questions. }}
+  <app-new-year-button (click)="checkAnswer()"></app-new-year-button>
+</div>
+
