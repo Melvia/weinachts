@@ -1,7 +1,9 @@
 <h1>Задание</h1>
 
-  <p>{{currentComponent() | json}}</p>
-  <p>{{ currentComponent()?.question }}</p>
+<!--<p>{{ currentComponent() | json }}</p>-->
+<!--<p>{{ currentComponent()?.question }}</p>-->
+
+<app-question-card><p #strangeText>{{ currentComponent()?.question }}</p></app-question-card>
 <div class="container">
   <input type="text" [(ngModel)]="answer">
 

@@ -5,6 +5,7 @@ import {FormsModule} from "@angular/forms";
 import {NewYearButtonComponent} from "../new-year-button/new-year-button.component";
 import {JsonPipe} from "@angular/common";
 import {Question, questions} from "./questions";
+import {QuestionCardComponent} from "../question-card/question-card.component";
 
 
 @Component({
@@ -13,7 +14,8 @@ import {Question, questions} from "./questions";
   imports: [
     FormsModule,
     NewYearButtonComponent,
-    JsonPipe
+    JsonPipe,
+    QuestionCardComponent
   ],
   templateUrl: './questions.component.html',
   styleUrl: './questions.component.scss'
